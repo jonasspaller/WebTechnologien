@@ -4,6 +4,8 @@
 <head>
 	<title>Jonas Spaller - Steckbrief</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -27,14 +29,16 @@
 				wir
 				für Ton und Video einsetzen (Dante und NDI).
 			</p>
-			<img alt="Ein Bild von Jonas Spaller" src="images/jonas.jpg">
+			<img alt="Ein Bild von Jonas Spaller" src="assets/images/jonas.jpg">
 		</article>
 		<article id="arbeiten">
 			<h2>Arbeiten</h2>
 			<ul>
-				<li>Mitwirkung an der Website des <a href="https://rouanet-gymnasium-beeskow.de/" target="_blank">Rouanet Gymnasium Beeskow</a>
+				<li>Mitwirkung an der Website des <a href="https://rouanet-gymnasium-beeskow.de/"
+						target="_blank">Rouanet Gymnasium Beeskow</a>
 				<li>Neue Website des örtlichen Jugendclubs in Beeskow</li>
-				<li>Website von DRS-Flug (örtlicher Anbieter von Airtrike-Touren) basierend auf WordPress (Custom Theme + Plugins)</li>
+				<li>Website von DRS-Flug (örtlicher Anbieter von Airtrike-Touren) basierend auf WordPress (Custom Theme
+					+ Plugins)</li>
 				<li>Website von <a href=" http://benno-radke.de/">Benno Radke</a></li>
 			</ul>
 		</article>
@@ -56,27 +60,22 @@
 				<li>SUP-Board fahren</li>
 			</ul>
 		</article>
+		<section id="kontaktformular">
+			<h2>Kontaktformular</h2>
+			<form>
+				<label for="name">Name</label>
+				<input id="name" name="name" type="text">
+				<label for="mail">E-Mail</label>
+				<input id="mail" name="mail" type="email">
+				<label for="betreff">Betreff</label>
+				<input id="betreff" name="betreff" type="text">
+				<label for="message">Nachricht</label>
+				<textarea id="message"></textarea>
+				<button type="reset">Reset</button>
+				<button type="submit">Senden</button>
+			</form>
+		</section>
 	</main>
-	<aside id="kontaktformular">
-		<h2>Kontaktformular</h2>
-		<form>
-			<label for="name">Name:</label>
-			<input id="name" name="name" type="text">
-			<label for="mail">E-Mail:</label>
-			<input id="mail" name="mail" type="email">
-			<label for="betreff">Betreff:</label>
-			<input id="betreff" name="betreff" type="text">
-			<label for="refnr">Referenznummer:</label>
-			<input id="refnr" name="refnr" type="number">
-			<label for="problem">Problem:</label>
-			<select id="problem">
-				<option value="Nix">Nix</option>
-				<option value="fotos">Tolles Foto!</option>
-			</select>
-			<input type="submit" value="Senden"> <!-- Input type submit kann nicht mit Bildern belegt werden -->
-			<button type="reset">Reset</button>
-		</form>
-	</aside>
 </body>
 
 </html>
