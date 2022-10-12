@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<title>Jonas Spaller - Steckbrief</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<main>
+		<h1>Jonas Spaller</h1>
+		<nav>
+			<ul>
+				<li><a href="#ueber-mich">Über mich</a></li>
+				<li><a href="#arbeiten">Arbeiten</a></li>
+				<li><a href="#kenntnisse">Kenntnisse</a></li>
+				<li><a href="#hobbies">Hobbies</a></li>
+				<li><a href="#kontaktformular">Kontaktformular</a></li>
+			</ul>
+		</nav>
+		<article id="ueber-mich">
+			<h2>Über mich</h2>
+			<p>Hallo! Ich bin Jonas Spaller und bin seit 26 Jahren vorhanden.</p>
+			<p>Wenn ich nicht gerade Medieninformatik an der <abbr title="Berliner Hochschule für Technik">BHT</abbr>
+				studiere, arbeite ich beim Bundeswirtschaftsministerium als Veranstaltungstechniker und kümmere mich
+				dort um klaren Sound (z.B. bei G7 Konferenzen), schöne Videos und die verschiedenen Netzwerke, welche
+				wir
+				für Ton und Video einsetzen (Dante und NDI).
+			</p>
+			<img alt="Ein Bild von Jonas Spaller" src="images/jonas.jpg">
+		</article>
+		<article id="arbeiten">
+			<h2>Arbeiten</h2>
+			<ul>
+				<li>Mitwirkung an der Website des <a href="https://rouanet-gymnasium-beeskow.de/" target="_blank">Rouanet Gymnasium Beeskow</a>
+				<li>Neue Website des örtlichen Jugendclubs in Beeskow</li>
+				<li>Website von DRS-Flug (örtlicher Anbieter von Airtrike-Touren) basierend auf WordPress (Custom Theme + Plugins)</li>
+				<li>Website von <a href=" http://benno-radke.de/">Benno Radke</a></li>
+			</ul>
+		</article>
+		<article id="kenntnisse">
+			<h2>Kentnisse</h2>
+			<ul>
+				<li>PHP</li>
+				<li>JS</li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Java</li>
+			</ul>
+		</article>
+		<article id="hobbies">
+			<h2>Hobbies</h2>
+			<ul>
+				<li><a href="https://www.instagram.com/jonasspaller" target="_blank">Fotogafie</a>
+				<li>Videografie</li>
+				<li>SUP-Board fahren</li>
+			</ul>
+		</article>
+	</main>
+	<aside id="kontaktformular">
+		<h2>Kontaktformular</h2>
+		<form>
+			<label for="name">Name:</label>
+			<input id="name" name="name" type="text">
+			<label for="mail">E-Mail:</label>
+			<input id="mail" name="mail" type="email">
+			<label for="betreff">Betreff:</label>
+			<input id="betreff" name="betreff" type="text">
+			<label for="refnr">Referenznummer:</label>
+			<input id="refnr" name="refnr" type="number">
+			<label for="problem">Problem:</label>
+			<select id="problem">
+				<option value="Nix">Nix</option>
+				<option value="fotos">Tolles Foto!</option>
+			</select>
+			<input type="submit" value="Senden"> <!-- Input type submit kann nicht mit Bildern belegt werden -->
+			<button type="reset">Reset</button>
+		</form>
+	</aside>
+</body>
+
+</html>
