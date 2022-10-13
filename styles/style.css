@@ -8,8 +8,8 @@
 }
 
 :root {
-	--font-col: #555;
-	--link-col: #0087ca;
+	--font-col: rgba(85 85 85 / 1);
+	--link-col: rgba(0 135 202 / 1);
 }
 
 html {
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-	background-color: #f0f2f5;
+	background-color: rgba(240 242 245 / 1);
 	font-family: "Raleway", sans-serif;
 }
 
@@ -30,6 +30,7 @@ aside {
 }
 
 main {
+	width: calc(100% - 2rem);
 	max-width: 50rem;
 	margin: 2rem auto;
 }
@@ -57,10 +58,6 @@ a:after {
 a:hover:after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
-}
-
-a:hover {
-	border-width: 1px;
 }
 
 nav {
@@ -105,15 +102,15 @@ ul li:not(nav ul li) {
 }
 
 form {
-	background-color: #ca4300;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
-    color: #fff;
+	background-color: rgba(202 67 0 / 1);
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+	color: rgba(255 255 255 / 1);
 	display: grid;
-    grid-template-columns: max-content 1fr;
-    grid-column-gap: 2rem;
-    grid-row-gap: 1rem;
+	grid-template-columns: minmax(0, 30%) minmax(0, 70%);
+	grid-column-gap: 2rem;
+	grid-row-gap: 1rem;
 	max-width: 30rem;
 	align-items: center;
 }
@@ -125,18 +122,24 @@ form textarea {
 	border-bottom: 1px solid rgba(255 255 255 / 0.2);
 	outline: none;
 	padding: 0.5rem 0.4rem;
-    font-size: .9rem;
+	font-size: .9rem;
+	transition: border-color 300ms ease;
 }
 
 form textarea {
 	min-height: 10rem;
 }
 
+form input:focus,
+form textarea:focus {
+	border-color: rgba(255 255 255 / 1);
+}
+
 button {
-	border: 2px solid #fff;
-    font-weight: 650;
-    padding: 0.5rem 1.3rem;
-    font-size: 0.8rem;
+	border: 2px solid rgba(255 255 255 / 1);
+	font-weight: 650;
+	padding: 0.5rem 1.3rem;
+	font-size: 0.8rem;
 	cursor: pointer;
 	transition: background-color 300ms ease;
 	text-transform: uppercase;
@@ -145,6 +148,24 @@ button {
 
 button:hover,
 button:focus {
-	background-color: #fff;
+	background-color: rgba(255 255 255 / 1);
 	color: var(--font-col);
+}
+
+@media all and (max-width: 600px) {
+
+	nav ul {
+		overflow-x: auto;
+		white-space: nowrap;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	nav ul::-webkit-scrollbar {
+		display: none;
+	}
+
+	form {
+		grid-template-columns: 1fr;
+	}
 }
