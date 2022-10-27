@@ -1,3 +1,6 @@
+@use "scss/_foundation.scss";
+@use "scss/_forms.scss";
+
 @font-face {
 	font-family: "Raleway";
 	src: url('/assets/fonts/Raleway-VariableFont_wght.ttf') format("truetype-variations");
@@ -9,24 +12,29 @@
 	--link-col: rgba(0 135 202 / 1);
 }
 
-@import "scss/foundation.scss";
-
 body {
 	background-color: rgba(240 242 245 / 1);
 	font-family: "Raleway", sans-serif;
 }
 
-@import "scss/main-nav.scss";
+nav {
+	text-align: center;
+}
 
-main,
-aside {
+nav ul li {
+	display: inline;
+	margin-right: 1rem;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+main {
 	background-color: #fff;
 	box-shadow: 0 1px 2px rgba(0 0 0 / 0.2);
 	border-radius: 8px;
 	padding: 2rem;
-}
-
-main {
 	width: calc(100% - 2rem);
 	max-width: 50rem;
 	margin: 2rem auto;
@@ -58,9 +66,70 @@ ul li:not(nav ul li) {
 	color: var(--font-col);
 }
 
-@import "scss/anchors.scss";
-@import "scss/forms.scss";
-@import "scss/buttons.scss";
+a {
+	display: inline-block;
+	position: relative;
+	color: var(--link-col);
+	text-decoration: none;
+}
+
+a:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--link-col);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+a:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+form {
+	background-color: rgba(202 67 0 / 1);
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+	color: rgba(255 255 255 / 1);
+	max-width: 30rem;
+}
+
+form input,
+form textarea {
+	background-color: rgba(255 255 255 / 0.1);
+	border-bottom: 1px solid rgba(255 255 255 / 0.2);
+	transition: border-color 300ms ease;
+	color:rgba(255 255 255 / 1);
+}
+
+form input:focus,
+form textarea:focus {
+	border-color: rgba(255 255 255 / 1);
+}
+
+button {
+	border: 2px solid rgba(255 255 255 / 1);
+	font-weight: 650;
+	padding: 0.5rem 1.3rem;
+	font-size: 0.8rem;
+	cursor: pointer;
+	transition: background-color 300ms ease;
+	text-transform: uppercase;
+	background-color: transparent;
+	color: rgba(255 255 255 / 1);
+}
+
+button:hover,
+button:focus {
+	background-color: rgba(255 255 255 / 1);
+	color: var(--font-col);
+}
 
 @media all and (max-width: 600px) {
 

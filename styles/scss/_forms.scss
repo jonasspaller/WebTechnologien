@@ -1,0 +1,19 @@
+form {
+	display: grid;
+	grid-template-columns: minmax(0, 30%) minmax(0, 70%);
+	grid-column-gap: 2rem;
+	grid-row-gap: 1rem;
+	align-items: center;
+}
+
+form input,
+form textarea {
+	border: none;
+	outline: none;
+	padding: 0.5rem 0.4rem;
+	font-size: .9rem;
+}
+
+form textarea {
+	min-height: 10rem;
+}
