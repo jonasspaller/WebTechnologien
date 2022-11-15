@@ -1,0 +1,145 @@
+@use "foundation";
+@use "fonts";
+
+:root {
+	font-family: "Poppins", sans-serif;
+	--clr-bg: rgb(39, 41, 50);
+	--accent-primary: rgb(251, 186, 114);
+	--accent-secondary: rgb(221, 64, 88);
+	--accent-dark: rgb(54, 76, 89);
+	--normal-text-color: rgb(225, 225, 225);
+}
+
+body {
+	background-color: var(--clr-bg);
+	color: var(--normal-text-color);
+	display: flex;
+	flex-flow: row wrap;
+	gap: calc(5% - 2rem);
+}
+
+header {
+	background-color: var(--accent-dark);
+	flex-basis: 25%;
+	flex-grow: 1;
+	padding: 2rem 2%;
+
+	img {
+		border-radius: 16px;
+	}
+}
+
+nav {
+
+	ul {
+		list-style: none;
+		margin-left: 0;
+	}
+
+	a {
+		display: block;
+		padding: 3% 0;
+		font-size: 1.3rem;
+	}
+}
+
+main {
+	flex-basis: 20rem;
+	flex-grow: 999;
+	min-inline-size: 55%;
+	padding: 2rem;
+
+	p,
+	li {
+		max-width: 60ch;
+	}
+}
+
+h1 {
+	color: var(--accent-primary);
+}
+
+.article-heading {
+	margin: 2rem 0 1rem;
+	background-color: var(--accent-primary);
+	display: inline-block;
+	color: var(--accent-dark);
+	padding: 0.4% 2%;
+	border-radius: 10px;
+	font-size: 1.3rem;
+}
+
+main article:first-of-type .article-heading {
+	margin-top: 0;
+}
+
+p+p {
+	margin-top: 1rem;
+}
+
+a {
+	color: var(--accent-secondary);
+	text-decoration: none;
+	transition: color 300ms ease;
+
+	&:hover,
+	&:focus {
+		color: var(--normal-text-color);
+	}
+}
+
+form {
+	background-color: rgba(255 255 255 / 0.5);
+	padding: 7%;
+	border-radius: 10px;
+	position: relative;
+	max-width: 30rem;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1.5rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: rgba(255, 255, 255, .15);
+		transform: rotate(-5deg);
+		border-radius: 10px;
+		z-index: -1;
+	}
+
+	input,
+	textarea {
+		color: var(--normal-text-color);
+		background: rgba(255, 255, 255, .3);
+		padding: 1rem 1.5rem;
+		border-radius: 10px;
+		transition: background 300ms ease;
+
+		&:focus {
+			color: var(--accent-dark);
+			background-color: #fff;
+		}
+	}
+
+	textarea {
+		min-height: 10rem;
+		resize: vertical;
+	}
+
+	button {
+		background: var(--accent-dark);
+		color: var(--normal-text-color);
+		padding: 1rem;
+		border-radius: 10px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		transition: color 300ms ease;
+
+		&:hover {
+			color: var(--accent-primary);
+			cursor: pointer;
+		}
+	}
+}
