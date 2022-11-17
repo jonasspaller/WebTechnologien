@@ -66,8 +66,7 @@ body {
 
 header {
   background-color: var(--accent-dark);
-  flex-basis: 25%;
-  flex-grow: 1;
+  flex: 1 0 25%;
   padding: 2rem 2%;
 }
 header img {
@@ -85,8 +84,7 @@ nav a {
 }
 
 main {
-  flex-basis: 20rem;
-  flex-grow: 999;
+  flex: 999 0 20rem;
   min-inline-size: 55%;
   padding: 2rem;
 }
