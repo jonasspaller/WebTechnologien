@@ -1,0 +1,8 @@
+@mixin bg-with-text($bg-clr, $txt-clr) {
+	background-color: $bg-clr;
+	color: $txt-clr;
+}
+
+@mixin rounded-corners($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0) {
+	border-radius: $top-left $top-right $bottom-right $bottom-left;
+}

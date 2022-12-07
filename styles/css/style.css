@@ -49,28 +49,31 @@ ul {
 }
 :root {
   font-family: "Poppins", sans-serif;
-  --clr-bg: rgb(39, 41, 50);
-  --accent-primary: rgb(251, 186, 114);
-  --accent-secondary: rgb(221, 64, 88);
-  --accent-dark: rgb(54, 76, 89);
-  --normal-text-color: rgb(225, 225, 225);
 }
 
 body {
-  background-color: var(--clr-bg);
-  color: var(--normal-text-color);
-  display: flex;
-  flex-flow: row wrap;
+  background-color: rgb(39, 41, 50);
+  color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: calc(5% - 2rem);
 }
 
+a, nav a {
+  color: rgb(221, 64, 88);
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+a:hover, a:focus {
+  color: #40ddc5;
+}
+
 header {
-  background-color: var(--accent-dark);
-  flex: 1 0 25%;
+  background-color: #393c4a;
   padding: 2rem 2%;
 }
 header img {
-  border-radius: 16px;
+  border-radius: 16px 8px 4px 2px;
 }
 
 nav ul {
@@ -83,9 +86,23 @@ nav a {
   font-size: 1.3rem;
 }
 
+#social-icons {
+  text-align: center;
+}
+
+.icon-instagram {
+  font-size: 1.4rem;
+}
+
+.icon-web {
+  font-size: 1.8rem;
+}
+
+.icon-facebook {
+  font-size: 2.2rem;
+}
+
 main {
-  flex: 999 0 20rem;
-  min-inline-size: 55%;
   padding: 2rem;
 }
 main p,
@@ -94,16 +111,16 @@ main li {
 }
 
 h1 {
-  color: var(--accent-primary);
+  color: rgb(251, 186, 114);
 }
 
 .article-heading {
+  background-color: rgb(251, 186, 114);
+  color: #393c4a;
   margin: 2rem 0 1rem;
-  background-color: var(--accent-primary);
   display: inline-block;
-  color: var(--accent-dark);
   padding: 0.4% 2%;
-  border-radius: 10px;
+  border-radius: 0 10px 0 0;
   font-size: 1.3rem;
 }
 
@@ -113,15 +130,6 @@ main article:first-of-type .article-heading {
 
 p + p {
   margin-top: 1rem;
-}
-
-a {
-  color: var(--accent-secondary);
-  text-decoration: none;
-  transition: color 300ms ease;
-}
-a:hover, a:focus {
-  color: var(--normal-text-color);
 }
 
 form {
@@ -145,7 +153,7 @@ form::before {
 }
 form input,
 form textarea {
-  color: var(--normal-text-color);
+  color: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.3);
   padding: 1rem 1.5rem;
   border-radius: 10px;
@@ -153,7 +161,7 @@ form textarea {
 }
 form input:focus,
 form textarea:focus {
-  color: var(--accent-dark);
+  color: #393c4a;
   background-color: #fff;
 }
 form textarea {
@@ -161,8 +169,8 @@ form textarea {
   resize: vertical;
 }
 form button {
-  background: var(--accent-dark);
-  color: var(--normal-text-color);
+  background: #393c4a;
+  color: rgb(255, 255, 255);
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
@@ -171,7 +179,7 @@ form button {
   transition: color 300ms ease;
 }
 form button:hover {
-  color: var(--accent-primary);
+  color: rgb(251, 186, 114);
   cursor: pointer;
 }
 

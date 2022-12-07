@@ -1,30 +1,37 @@
 @use "foundation";
 @use "fonts";
+@use "vars";
+@use "sass:color";
+@use "mixins";
 
 :root {
 	font-family: "Poppins", sans-serif;
-	--clr-bg: rgb(39, 41, 50);
-	--accent-primary: rgb(251, 186, 114);
-	--accent-secondary: rgb(221, 64, 88);
-	--accent-dark: rgb(54, 76, 89);
-	--normal-text-color: rgb(225, 225, 225);
 }
 
 body {
-	background-color: var(--clr-bg);
-	color: var(--normal-text-color);
-	display: flex;
-	flex-flow: row wrap;
+	@include mixins.bg-with-text(vars.$bg-clr, vars.$txt-clr);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: calc(5% - 2rem);
 }
 
+a {
+	color: vars.$accent-secondary;
+	text-decoration: none;
+	transition: color 300ms ease;
+
+	&:hover,
+	&:focus {
+		color: color.complement(vars.$accent-secondary);
+	}
+}
+
 header {
-	background-color: var(--accent-dark);
-	flex: 1 0 25%;
+	background-color: vars.$accent-dark;
 	padding: 2rem 2%;
 
 	img {
-		border-radius: 16px;
+		@include mixins.rounded-corners(16px, 8px, 4px, 2px);
 	}
 }
 
@@ -36,15 +43,27 @@ nav {
 	}
 
 	a {
+		@extend a;
 		display: block;
 		padding: 3% 0;
 		font-size: 1.3rem;
 	}
 }
 
+#social-icons {
+	text-align: center;
+}
+
+$icons: instagram, web, facebook;
+$i: 1;
+@each $icon in $icons {
+	.icon-#{$icon}{
+		font-size: 1rem + $i * 0.4rem;
+	}
+	$i: $i + 1;
+}
+
 main {
-	flex: 999 0 20rem;
-	min-inline-size: 55%;
 	padding: 2rem;
 
 	p,
@@ -54,16 +73,15 @@ main {
 }
 
 h1 {
-	color: var(--accent-primary);
+	color: vars.$accent-primary;
 }
 
 .article-heading {
+	@include mixins.bg-with-text(vars.$accent-primary, vars.$accent-dark);
 	margin: 2rem 0 1rem;
-	background-color: var(--accent-primary);
 	display: inline-block;
-	color: var(--accent-dark);
 	padding: 0.4% 2%;
-	border-radius: 10px;
+	@include mixins.rounded-corners(0, 10px);
 	font-size: 1.3rem;
 }
 
@@ -75,19 +93,10 @@ p+p {
 	margin-top: 1rem;
 }
 
-a {
-	color: var(--accent-secondary);
-	text-decoration: none;
-	transition: color 300ms ease;
-
-	&:hover,
-	&:focus {
-		color: var(--normal-text-color);
-	}
-}
+$form-bg: rgba(255 255 255 / 0.5);
 
 form {
-	background-color: rgba(255 255 255 / 0.5);
+	background-color: $form-bg;
 	padding: 7%;
 	border-radius: 10px;
 	position: relative;
@@ -100,7 +109,7 @@ form {
 		content: '';
 		position: absolute;
 		inset: 0;
-		background-color: rgba(255, 255, 255, .15);
+		background-color: color.adjust($form-bg, $alpha: -0.35);
 		transform: rotate(-5deg);
 		border-radius: 10px;
 		z-index: -1;
@@ -108,14 +117,14 @@ form {
 
 	input,
 	textarea {
-		color: var(--normal-text-color);
-		background: rgba(255, 255, 255, .3);
+		color: vars.$txt-clr;
+		background: color.adjust($form-bg, $alpha: -0.2);
 		padding: 1rem 1.5rem;
 		border-radius: 10px;
 		transition: background 300ms ease;
 
 		&:focus {
-			color: var(--accent-dark);
+			color: vars.$accent-dark;
 			background-color: #fff;
 		}
 	}
@@ -126,8 +135,8 @@ form {
 	}
 
 	button {
-		background: var(--accent-dark);
-		color: var(--normal-text-color);
+		background: vars.$accent-dark;
+		color: vars.$txt-clr;
 		padding: 1rem;
 		border-radius: 10px;
 		text-align: center;
@@ -136,7 +145,7 @@ form {
 		transition: color 300ms ease;
 
 		&:hover {
-			color: var(--accent-primary);
+			color: vars.$accent-primary;
 			cursor: pointer;
 		}
 	}

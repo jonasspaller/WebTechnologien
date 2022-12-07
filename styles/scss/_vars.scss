@@ -1,0 +1,7 @@
+@use "sass:color";
+
+$bg-clr: rgb(39 41 50);
+$accent-dark: color.scale($bg-clr, $lightness: 10%);
+$accent-primary: rgb(251, 186, 114);
+$accent-secondary: rgb(221, 64, 88);
+$txt-clr: rgb(255 255 255);
