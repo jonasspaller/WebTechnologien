@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+:root {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  margin-left: 1.5rem;
+}
+
+body {
+  background-color: #364C59;
+  padding: 2rem;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+#canvas {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  max-width: 40rem;
+  aspect-ratio: 1/1;
+  margin: 1rem auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+#canvas div:nth-of-type(1) {
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: hsl(13deg, 100%, 53%);
+  border-radius: 50%;
+  animation: kf-17 0.25s ease infinite;
+  top: 30%;
+}
+@keyframes kf-17 {
+  0% {
+    left: 40%;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 40%;
+  }
+}
+#canvas div:nth-of-type(2) {
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6rem;
+  background-color: hsl(48deg, 100%, 56%);
+  border-radius: 50%;
+  animation: kf-247 4s ease infinite;
+}
+@keyframes kf-247 {
+  0% {
+    inset: 0 37.4rem 37.4rem 0;
+  }
+  25% {
+    inset: 0 0 37.4rem 37.4rem;
+  }
+  50% {
+    inset: 37.4rem 0 0 37.4rem;
+  }
+  75% {
+    inset: 37.4rem 37.4rem 0 0;
+  }
+  100% {
+    inset: 0 37.4rem 37.4rem 0;
+  }
+}
+#canvas div:nth-of-type(3) {
+  position: absolute;
+  width: 3.9rem;
+  height: 3.9rem;
+  background-color: hsl(39deg, 100%, 59%);
+  border-radius: 50%;
+  animation: kf-59 6s ease infinite;
+  border: 3.9rem solid black;
+  width: 0;
+  height: 0;
+  border-right-color: transparent;
+  background-color: transparent;
+}
+@keyframes kf-59 {
+  0% {
+    bottom: 0;
+    left: -3.9rem;
+  }
+  50% {
+    left: 50%;
+    rotate: 180deg;
+    bottom: 0;
+  }
+  100% {
+    left: 100%;
+    rotate: 360deg;
+    bottom: 0;
+  }
+}
+#canvas div:nth-of-type(4) {
+  position: absolute;
+  width: 5.2rem;
+  height: 5.2rem;
+  background-color: hsl(96deg, 100%, 62%);
+  border-radius: 50%;
+  animation: kf-287 1s ease infinite;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+@keyframes kf-287 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#canvas div:nth-of-type(5) {
+  position: absolute;
+  width: 6.5rem;
+  height: 6.5rem;
+  background-color: hsl(65deg, 100%, 65%);
+  border-radius: 50%;
+  animation: kf-267 0.25s ease infinite;
+  top: 30%;
+}
+@keyframes kf-267 {
+  0% {
+    left: 40%;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 40%;
+  }
+}
+
+/*# sourceMappingURL=animations.css.map */
