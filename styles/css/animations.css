@@ -32,6 +32,84 @@ ul {
   margin-left: 1.5rem;
 }
 
+@keyframes animation-1 {
+  0% {
+    transform: translate(5rem, 5rem);
+  }
+  25% {
+    transform: translate(35rem, 5rem);
+  }
+  50% {
+    transform: translate(35rem, 35rem);
+  }
+  75% {
+    transform: translate(5rem, 35rem);
+  }
+  100% {
+    transform: translate(5rem, 5rem);
+  }
+}
+@keyframes animation-2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes animation-3 {
+  0% {
+    transform: translate(10rem, 8rem);
+  }
+  50% {
+    transform: translate(30rem, 8rem);
+  }
+  100% {
+    transform: translate(10rem, 8rem);
+  }
+}
+@keyframes animation-4 {
+  0% {
+    bottom: 0;
+    left: -5rem;
+  }
+  50% {
+    left: 50%;
+    rotate: 180deg;
+    bottom: 0;
+  }
+  100% {
+    left: 100%;
+    rotate: 360deg;
+    bottom: 0;
+  }
+}
+@keyframes animation-5 {
+  0% {
+    transform: translate(20rem, 5rem);
+  }
+  25% {
+    transform: translate(20rem, 40rem);
+  }
+  30% {
+    transform: translate(20rem, 38rem);
+  }
+  35% {
+    transform: translate(20rem, 40rem);
+  }
+  40% {
+    transform: translate(20rem, 38rem);
+  }
+  45% {
+    transform: translate(20rem, 40rem);
+  }
+  100% {
+    transform: translate(20rem, 5rem);
+  }
+}
 body {
   background-color: #364C59;
   padding: 2rem;
@@ -59,19 +137,7 @@ h1 {
   height: 1.3rem;
   background-color: hsl(13deg, 100%, 53%);
   border-radius: 50%;
-  animation: kf-17 0.25s ease infinite;
-  top: 30%;
-}
-@keyframes kf-17 {
-  0% {
-    left: 40%;
-  }
-  50% {
-    left: 60%;
-  }
-  100% {
-    left: 40%;
-  }
+  animation: animation-1 1s linear infinite;
 }
 #canvas div:nth-of-type(2) {
   position: absolute;
@@ -79,24 +145,7 @@ h1 {
   height: 2.6rem;
   background-color: hsl(48deg, 100%, 56%);
   border-radius: 50%;
-  animation: kf-247 4s ease infinite;
-}
-@keyframes kf-247 {
-  0% {
-    inset: 0 37.4rem 37.4rem 0;
-  }
-  25% {
-    inset: 0 0 37.4rem 37.4rem;
-  }
-  50% {
-    inset: 37.4rem 0 0 37.4rem;
-  }
-  75% {
-    inset: 37.4rem 37.4rem 0 0;
-  }
-  100% {
-    inset: 0 37.4rem 37.4rem 0;
-  }
+  animation: animation-2 2s linear infinite;
 }
 #canvas div:nth-of-type(3) {
   position: absolute;
@@ -104,28 +153,7 @@ h1 {
   height: 3.9rem;
   background-color: hsl(39deg, 100%, 59%);
   border-radius: 50%;
-  animation: kf-59 6s ease infinite;
-  border: 3.9rem solid black;
-  width: 0;
-  height: 0;
-  border-right-color: transparent;
-  background-color: transparent;
-}
-@keyframes kf-59 {
-  0% {
-    bottom: 0;
-    left: -3.9rem;
-  }
-  50% {
-    left: 50%;
-    rotate: 180deg;
-    bottom: 0;
-  }
-  100% {
-    left: 100%;
-    rotate: 360deg;
-    bottom: 0;
-  }
+  animation: animation-3 3s linear infinite;
 }
 #canvas div:nth-of-type(4) {
   position: absolute;
@@ -133,21 +161,7 @@ h1 {
   height: 5.2rem;
   background-color: hsl(96deg, 100%, 62%);
   border-radius: 50%;
-  animation: kf-287 1s ease infinite;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-@keyframes kf-287 {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(2);
-  }
-  100% {
-    transform: scale(1);
-  }
+  animation: animation-4 4s linear infinite;
 }
 #canvas div:nth-of-type(5) {
   position: absolute;
@@ -155,19 +169,14 @@ h1 {
   height: 6.5rem;
   background-color: hsl(65deg, 100%, 65%);
   border-radius: 50%;
-  animation: kf-267 0.25s ease infinite;
-  top: 30%;
+  animation: animation-5 5s linear infinite;
 }
-@keyframes kf-267 {
-  0% {
-    left: 40%;
-  }
-  50% {
-    left: 60%;
-  }
-  100% {
-    left: 40%;
-  }
+#canvas div:nth-of-type(4) {
+  border: 2.6rem solid black;
+  border-right-color: transparent;
+  background-color: transparent;
+  width: 0;
+  height: 0;
 }
 
 /*# sourceMappingURL=animations.css.map */
